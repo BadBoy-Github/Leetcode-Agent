@@ -4,7 +4,7 @@
   "description": "LeetCode Autonomous Agentic AI Coder with Neon PostgreSQL",
   "scripts": {
     "build": "python -c \"import database, app, agent, leetcode_client; print('Build verification passed! All modules and Neon database drivers verified.')\"",
-    "start": "python -m streamlit run app.py --server.port 8501"
+    "start": "python render_start.py"
   },
   "dependencies": {
     "@neon/config": "^1.9.2",

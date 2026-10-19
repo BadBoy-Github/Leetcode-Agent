@@ -76,6 +76,23 @@ Then open your browser at `http://localhost:8501`.
 
 ---
 
+## ☁️ Deploy on Render
+
+Create a **Web Service** for this repository with:
+
+- **Build command:** `pip install -r requirements.txt`
+- **Start command:** `python render_start.py` (or `npm start`)
+- **Runtime:** Python
+
+The launcher binds Streamlit to `0.0.0.0` and Render's assigned `PORT` (using
+`8501` locally when `PORT` is not set), and configures Streamlit for Render's
+reverse proxy so the app's WebSocket connection can be established. Add
+`GEMINI_API_KEY`, `GEMINI_MODEL`, `LEETCODE_SESSION`, `LEETCODE_CSRFTOKEN`, and
+`DATABASE_URL` as environment variables in the Render dashboard rather than
+committing them to the repository.
+
+---
+
 ## 🔑 How to Get Your Credentials
 
 ### 1. Google Gemini API Key (Free)
